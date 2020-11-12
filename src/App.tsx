@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Fabric } from "@fluentui/react";
+import { ThemeProvider } from "@fluentui/react";
 import "./styles.css";
 
 export default function App() {
   return (
-    <Fabric>
+    <ThemeProvider>
       <div className="App">
         <h1 className="head">Floyds Cycle Detection Algorithm</h1>
         <div className="content">
@@ -25,6 +25,6 @@ export default function App() {
           <h4>Auxiliary Space: O(1)</h4>
         </div>
       </div>
-    </Fabric>
+    </ThemeProvider>
   );
 }

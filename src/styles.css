@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  font-size: 150%;
+  text-align: center;
+}
+
+.header {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.content {
+  font-family: sans-serif;
+  color: black;
+  text-align: left;
+  border-radius: 10px;
+  background: white;
+  margin: 30px;
+  padding: 40px;
+  box-shadow: 13px 10px 13px 0px rgba(0, 0, 0, 0.11);
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

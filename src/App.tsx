@@ -6,7 +6,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <div className="App">
-        <h1 className="head">Floyds Cycle Detection Algorithm</h1>
+        <h1 className="header">Floyds Cycle Detection Algorithm</h1>
         <div className="content">
           <h4> Used to detect if there is a existing loop in a list by:</h4>
           <p>1. Initializes a slow and fast pointer eqaul to head.</p>

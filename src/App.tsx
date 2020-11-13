@@ -19,7 +19,7 @@ export default function App() {
           <img
             className="image"
             alt="Diagram"
-            src="https://lh3.googleusercontent.com/proxy/AroLS1lMfabjEY0xZWHzutAQDSPw4dC-L4nT4KWgIZ5h43GJfl_EQpNu0_YFP5fizpen2kwaZ1JKzr4uhiJUBZIlnRdTnmr53Ug"
+            src="https://www.techiedelight.com/wp-content/uploads/Cycle-linked-list.png"
           />
           <h4>Time Complexity: O(n)</h4>
           <h4>Auxiliary Space: O(1)</h4>

@@ -40,15 +40,29 @@ export const addNode = (data: any) => {
  * 2. Traverse the list as long as slow, fast, and fast.next don't equal null.
  * 3. Increment slow to slow.next and fast to fast.next.next.
  * 4. If slow matches fast then there is a loop else no loop.
+ *
+ * Removes loop by:
+ * 1. Initializing a pointer as head
+ * 2. While the pointers.next don't match, traverse.
+ * 3. Now that the pointers match set, pointer.next to null.
  */
-export const detectLoop = () => {
-  let slow = head;
-  let fast = head;
-  while (slow != null && fast != null && fast.next != null) {
-    slow = slow.next;
-    fast = fast.next.next;
-    if (slow === fast) {
-      return slow.data;
+export const floydsCycleDetection = () => {
+  if (head) {
+    let slow = head;
+    let fast = head;
+    while (slow.next != null && fast.next != null && fast.next.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
+      if (slow === fast) {
+        // There is a loop let's remove it:
+        slow = head;
+        while (slow.next !== fast.next) {
+          slow = slow.next;
+          fast = fast.next;
+        }
+        fast.next = null;
+        return true;
+      }
     }
   }
   return false;

@@ -1,6 +1,11 @@
-import { head, addNode, detectLoop, clearNodes } from "./detectionAlg";
+import {
+  head,
+  addNode,
+  floydsCycleDetection,
+  clearNodes
+} from "./floydsCycleDetection";
 
-describe("detectLoop", () => {
+describe("floydsCycleDetection", () => {
   beforeEach(() => {
     clearNodes();
   });
@@ -12,7 +17,7 @@ describe("detectLoop", () => {
     addNode("Fourth");
     addNode("Fifth");
     head.next.next.next = head.next;
-    expect(detectLoop()).toBe("Third");
+    expect(floydsCycleDetection()).toBe(true);
   });
 
   it("detects if there isn't any repeating nodes", () => {
@@ -21,7 +26,7 @@ describe("detectLoop", () => {
     addNode("Third");
     addNode("Fourth");
     addNode("Fifth");
-    expect(detectLoop()).toBe(false);
+    expect(floydsCycleDetection()).toBe(false);
   });
 
   it("handles null data.", () => {
@@ -31,10 +36,10 @@ describe("detectLoop", () => {
     addNode(null);
     addNode(null);
     head.next.next.next = head.next;
-    expect(detectLoop()).toBe("Third");
+    expect(floydsCycleDetection()).toBe(true);
   });
 
   it("handles null head.", () => {
-    expect(detectLoop()).toBe(false);
+    expect(floydsCycleDetection()).toBe(false);
   });
 });
